@@ -3,10 +3,13 @@
 #include<eigen3/Eigen/Dense>
 #include<iostream>
 
+using std::cout;
+using std::endl;
+
 int main(){
 
     // Basic Example of cpp
-    std::cout << "Example of cpp \n";
+   /* std::cout << "Example of cpp \n";
     float a = 1.0, b = 2.0;
     std::cout << a << std::endl;
     std::cout << a/b << std::endl;
@@ -29,8 +32,10 @@ int main(){
     std::cout << "Example of scalar multiply \n";
     std::cout << v * 3.0f << std::endl;
     std::cout << 2.0f * v << std::endl;
-
+	*/
     // Example of matrix
+    Eigen::Vector3f v(1.0f,2.0f,3.0f);
+    Eigen::Vector3f w(1.0f,0.0f,0.0f);
     std::cout << "Example of matrix \n";
     // matrix definition
     Eigen::Matrix3f i,j;
@@ -39,6 +44,11 @@ int main(){
     // matrix output
     std::cout << "Example of output \n";
     std::cout << i << std::endl;
+	cout << i + j << endl;
+	cout << i * 2.0f << endl;
+	cout << i * j << endl;
+	cout << i * v << endl;	
+//	cout << v * i << endl;	
     // matrix add i + j
     // matrix scalar multiply i * 2.0
     // matrix multiply i * j
